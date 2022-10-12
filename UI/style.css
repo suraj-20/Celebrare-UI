@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header section start */
+
+button {
+    display: none;
+    float: left;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+
+.header img {
+    height: 3rem;
+    width: 8rem;
+    margin: 0rem 5rem 0rem 0rem;
+}
+
+.nav-item {
+    margin: 0rem 1.5rem;
+}
+
+.navbar .nav .login {
+    margin-left: 5rem;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    font-family: serif;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: #000;
+}
+
+@media (max-width:1313px) {
+
+    .nav-item {
+        margin: 0;
+    }
+}
+
+@media (max-width:1098px) {
+
+    .header img {
+        margin: 0 1rem 0 0;
+    }
+
+    .navbar .nav .login {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width:969px) {
+
+    .nav-link {
+        padding: 0.3rem;
+        font-size: 1.1rem;
+    }
+
+    .header img {
+        margin: 0 ;
+    }
+
+    .navbar .nav .login {
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width:769px) {
+
+    button {
+        display: flex;
+        padding: 0.4rem 0.6rem;
+        font-size: 1.2rem;
+        border: none;
+        margin: 0rem 1rem;
+    }
+
+    .header {
+        justify-content: space-between;
+        height: 4rem;
+        width: 100vw;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header img {
+        margin: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    nav.active {
+        background-color: #f2f2f2;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        display: block;
+        position: relative;
+        top: 7.5rem;
+        left: -5.5rem;
+        width: 100%;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav-link {
+        color: rgb(21, 21, 21);
+    }
+
+    .navbar .nav .login {
+        margin-left: 1.5rem;
+    }
+
+}
+
+@media (max-width:425px) {
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .navbar .nav .login {
+        margin-left: 0;
+    }
+
+}
+
+/* header section end */
+
+
+/* card-details section start */
+
+.card-details {
+    text-align: center;
+}
+
+.bg-img {
+    width: 100vw;
+    text-align: center;
+}
+
+.bg-img img {
+    width: 90%;
+    height: 18rem;
+    border-radius: 5rem;
+}
+
+.heading {
+    position: relative;
+    top: 5.5rem;
+    font-family: serif;
+    font-size: 3rem;
+    color: #f2f2f2;
+}
+
+@media (max-width:768px) {
+
+    .bg-img img {
+        height: 15rem;
+        border-radius: 2rem;
+    }
+
+    .heading {
+        top: 6rem;
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width:426px) {
+
+    .heading {
+        font-size: 2rem;
+    }
+
+}
+
+/* card-details section end */
+
+/* card-title section start */
+
+.card-title {
+    width: 84%;
+    height: 35rem;
+    border: 0.5px solid rgb(112, 98, 98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 5rem;
+    position: relative;
+    top: -10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+}
+
+#carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 61%;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.card {
+    position: absolute;
+    width: 15rem;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.card:nth-child(1) {
+    transform: translateX(0) translateZ(0);
+}
+
+.card:nth-child(2) {
+    transform: translateX(-55%) translateZ(-50px) scale(0.8);
+}
+
+.card:nth-child(3) {
+    transform: translateX(55%) translateZ(-50px) scale(0.8);
+}
+
+
+.container2 {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-heading {
+    text-align: center;
+}
+
+.container2 .amount {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.container .info {
+    font-size: 1rem;
+}
+
+.container2 span {
+    margin-left: 4rem;
+    font-weight: 600;
+    font-family: serif;
+    font-size: 2rem;
+    color: yellowgreen;
+}
+
+.line {
+    display: none;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border: none;
+    font-family: serif;
+    border-radius: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+@media (max-width:1024px) {
+
+    .card {
+        width: 12rem;
+    }
+
+    .container2 .amount {
+        font-size: 1rem;
+    }
+
+    .container2 span {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+} 
+
+@media (max-width:768px) {
+
+    .card-title {
+        flex-direction: column;
+        height: 47rem;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 2rem;
+        top: -8rem;
+    }
+
+    #carousel {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        width: 14rem;
+        height: 20rem;
+        align-items: center;
+    }
+
+    .card img {
+        height: 21rem;
+        padding: 0 0 1rem 0;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    .container2 span {
+        margin-left: 1rem;
+    }
+
+    .line {
+        display: flex;
+        border: 1px solid #000;
+        width: 80%;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        border-radius: 3rem;
+    }
+}
+
+@media (max-width:498px) {
+
+    .card {
+        width: 7rem;
+    }
+
+    .card:nth-child(2) {
+        transform: translateX(0) translateZ(0) scale(0);
+    }
+
+}
+
+@media (max-width:426px) {
+
+    .container2 .amount {
+        font-size: 1.5rem;
+    }
+
+    .container2 span {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+}
+
+/* card-title section end */
+
+/* card-details section start */
+
+.card-container {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 90%);
+    border-radius: 1rem;
+    width: 90%;
+    height: 80vh;
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+}
+
+.button {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    align-items: center;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(202, 13, 13);
+    color: #fff;
+}
+
+.button i {
+    margin-left: 0.5rem;
+}
+
+.close {
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+
+    .card-container {
+        flex-direction: column;
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    .close {
+        top: 0rem;
+        right: 1rem;
+    }
+
+}
+
+@media (max-width:375px) {
+    
+    .card-container {
+        height: 115vh;
+    }
+
+}
+
+/* card-details section end */
+
+
+/* features section start */
+
+.features {
+    position: relative;
+    top: -6rem;
+    width: 84%;
+}
+
+.f-heading {
+    font-family: serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.feature-contianer {
+    width: 100%;
+    height: 20rem;
+    padding: 2rem;
+    border: 0.5px solid rgb(112, 98, 98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    border: none;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    color: transparent;
+    box-shadow: 0px 0px 20px 1px rgb(230, 229, 229) inset;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+@media (max-width:768px) {
+
+    .feature-contianer {
+        flex-direction: column;
+        text-align: start;
+        height: fit-content;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+
+    .container {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    .circle {
+        margin: 1rem;
+    }
+
+    .circle h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:426px) {
+    
+    .feature-contianer {
+        padding: 0.2rem;
+    }
+
+}
+
+/* features section end */
